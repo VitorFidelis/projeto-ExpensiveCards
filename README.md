@@ -18,6 +18,4 @@
 
 <img src="Imagens-ExpensiveCard/4°%20Imagem%20.png" alt="quarta imagem">
 
-
-
-<a href="https://vitorfidelis.github.io/projeto-ExpensiveCards/" target="_blank" rel="noopener noreferrer">Click aqui!✔️</a> e veja como ficou esse projeto.
+<a href="https://vitorfidelis.github.io/projeto-ExpensiveCards/" target="_blank" rel="noopener noreferrer">Click aqui!✔️</a> <p>e veja como ficou esse projeto.</p>
