@@ -1,0 +1,71 @@
+@charset'UTF-8';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;/* overflowes especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, exibido com barras de rolagem ou se transbordar do elemento. */
+    margin: 0;
+    background-color: black;
+}
+
+div.container{
+    display: flex;
+    width: 90vw;
+}
+
+div.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;/*  flex define como um ítem será posicionado para no espaço disponível dentro de seu container. */
+    margin: 10px;
+    position: relative;
+    -webkit-transition:all 1000ms ease-in;
+}
+
+.panel h3{
+    background-color: rgba(0, 0, 0, 0.878);
+    border-radius: 20px;
+    padding: 9px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    color: crimson;
+}
+
+/* Uma media query consiste de um media type e pelo menos uma expressão que limita o escopo das folhas de estilo usando media features, tal como largura, altura e cor. Media queries, adicionadas no CSS3, deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si. */
+@media(max-with:480px){
+    .container{
+        width: 100vw;
+    }
+
+    /* :nth-of-type() corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos. */
+    .panel:nth-last-of-type(4),
+    .panel:nth-last-of-type(5){
+        display: none;
+    }
+}
